@@ -10,6 +10,7 @@ export class IngestionController {
   constructor(private ingestionService: IngestionService) {}
 
   @Post('trigger')
+  //Mentioned role for triggering ingestion.
   @Roles('viewer', 'admin')
   async triggerIngestion(@Body() documentIds: number[]) {
     console.log("Triggering ingestion for documents:", documentIds);

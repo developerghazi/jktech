@@ -30,7 +30,7 @@ export class DocumentsService {
   async findOne(id: number) {
     return this.documentsRepository.findOne({ where: { id } });
   }
-
+  //This will remove the document entry based on the ID.
   async remove(id: number) {
     return this.documentsRepository.delete(id);
   }
